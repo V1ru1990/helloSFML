@@ -25,8 +25,8 @@ class Platform
         void reset(); //сброс позиции на рандомные координаты
         sf::FloatRect getBounds() const; //определение касания
         void draw(sf::RenderWindow& window); //отрисовка платформы
-        bool isOffScreen(int windowHeight) const; //проверка на окно
-        void update(int screenHeight);
+        bool isOffScreen() const; //проверка на окно
+        void update();
         bool isTextureLoaded();
 
         void showPosition() const;
