@@ -58,7 +58,7 @@ void Platform::loadTexture(const char* filename)
  
  {
     m_y += dy;
-    Platform::update(WINDOW_LENGTH);
+    Platform::update();
  }
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -92,7 +92,7 @@ void Platform::loadTexture(const char* filename)
 //////////////////////////////////////////////////////////////////////////////////////////
 //проверка, вышла ли платформа за границы окна, 
 //если да - переместить в наверх с отсупом в 50 пикселей
- bool Platform::isOffScreen(int windowHeight) const 
+ bool Platform::isOffScreen() const 
  {
     return m_y > WINDOW_WIDTH + BUFFER_ZONE;
  }
@@ -104,9 +104,9 @@ void Platform::loadTexture(const char* filename)
 //если нет -> сброс координат по принципу 
 //сместить наверх с отступом от верхней точки
 //абсциссу принять за любую от 0 до WINDOW_WIDTH - 1
- void Platform::update(int screenHeight)
+ void Platform::update()
  {
-    if (isOffScreen(WINDOW_WIDTH))
+    if (isOffScreen())
     {
         Platform::reset();
     }
