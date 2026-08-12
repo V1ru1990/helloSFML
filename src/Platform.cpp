@@ -88,7 +88,7 @@ void Platform::loadTexture(const char* filename)
  bool Platform::isOffScreen(int windowHeight) const 
  //проверка на окно
  {
-    return m_y > WINDOW_LENGTH + BUFFER_ZONE;
+    return m_y > WINDOW_WIDTH + BUFFER_ZONE;
  }
 
  void Platform::update(int screenHeight)
@@ -97,6 +97,7 @@ void Platform::loadTexture(const char* filename)
     {
         Platform::reset();
     }
+    m_spritePlatform.setPosition(m_x, m_y);
  }
 
  bool Platform::isTextureLoaded()
