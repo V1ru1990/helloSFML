@@ -1,24 +1,14 @@
 #include <SFML/Graphics.hpp>
 #include "Engine/Platform.h"
+#include "Engine/Player.h"
 #include "Engine/World.h"
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(WINDOW_LENGTH, WINDOW_WIDTH), "HELLO SFML!");
-    window.setFramerateLimit(1);
+    window.setFramerateLimit(60);
     
-
-    Platform firstPlatform;
-    firstPlatform.loadTexture("images/platform.png");
-
-    if (!firstPlatform.isTextureLoaded())
-    {
-        return -1;
-    }
-
-    firstPlatform.setRandomPosition();
-    firstPlatform.showPosition();
-
+    
     while (window.isOpen())
     {
         sf::Event event;
@@ -29,10 +19,6 @@ int main()
         }
 
         window.clear(sf::Color::White);
-
-        firstPlatform.reset();
-        firstPlatform.showPosition();
-        firstPlatform.draw(window);
 
         window.display();
 
