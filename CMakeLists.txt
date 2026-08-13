@@ -7,7 +7,7 @@ add_executable(helloSFML
     src/Player.cpp
     include/Engine/Platform.h
     include/Engine/Player.h
-    include/Engine/World.h)
+    include/Engine/Constants.h)
 
 target_include_directories(helloSFML PRIVATE include)
 
