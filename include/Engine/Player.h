@@ -8,11 +8,10 @@ class Player
     static constexpr int DEFAULT_PLAYER_Y = 300;
     static constexpr int DEFAULT_PLAYER_WIDTH = 80;
     static constexpr int DEFAULT_PLAYER_HEIGHT = 70;
-    static constexpr int DEFAULT_GRAVITY = 3; 
-    static constexpr int DEFAULT_PLAYER_SPEED = 0;
-    static constexpr int DEFAULT_MOVE_SPEED_X = 3;
-    static constexpr int DEFAULT_MOVE_SPEED_Y = 0;
-    static constexpr int DEFAULT_JUMP_POWER = -10;
+    static constexpr float DEFAULT_GRAVITY = 0.2f; 
+    static constexpr float DEFAULT_PLAYER_SPEED = 0.0f;
+    static constexpr float DEFAULT_MOVE_SPEED = 5.0f;
+    static constexpr float DEFAULT_JUMP_POWER = -10.0f;
 
 
     float m_x, m_y; //координаты объекта
