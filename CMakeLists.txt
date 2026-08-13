@@ -4,7 +4,9 @@ project(helloSFML VERSION 0.1.0 LANGUAGES C CXX)
 add_executable(helloSFML
     src/main.cpp
     src/Platform.cpp
+    src/Player.cpp
     include/Engine/Platform.h
+    include/Engine/Player.h
     include/Engine/World.h)
 
 target_include_directories(helloSFML PRIVATE include)
