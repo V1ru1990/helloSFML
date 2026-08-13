@@ -1,5 +1,5 @@
 #include <SFML/Graphics.hpp>
-#include "Engine/World.h"
+#include "Engine/Constants.h"
 #include "Engine/Player.h"
 
 #include <iostream>
