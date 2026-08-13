@@ -32,6 +32,7 @@ void Player::loadTexture(const char* filename) //загрузка текстур
     else
     {
         std::cerr << "Texture loading error\n";
+        m_textureLoaded = false;
         return;
     }
     m_spritePlayer.setTexture(m_texturePlayer);
