@@ -8,8 +8,8 @@
 Player::Player()
     : m_x(DEFAULT_PLAYER_X)
     , m_y(DEFAULT_PLAYER_Y)
-    , m_dx(DEFAULT_MOVE_SPEED_X)
-    , m_dy(DEFAULT_MOVE_SPEED_Y)
+    , m_dx(0)
+    , m_dy(0)
     , m_width(DEFAULT_PLAYER_WIDTH)
     , m_height(DEFAULT_PLAYER_HEIGHT)
     , m_textureLoaded(false)
@@ -115,7 +115,7 @@ void Player::handleInput() //проверяем нажатие клавиши
 //////////////////////////////////////////////////////////////////////////////////////////
 void Player::moveLeft() //перемещение влево по оси абсцисс
 {
-    m_x -= DEFAULT_MOVE_SPEED_X;
+    m_x -= DEFAULT_MOVE_SPEED;
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -123,7 +123,7 @@ void Player::moveLeft() //перемещение влево по оси абсц
 //////////////////////////////////////////////////////////////////////////////////////////
 void Player::moveRight() //перемещение вправо по оси абсцисс
 {
-    m_x += DEFAULT_MOVE_SPEED_X;
+    m_x += DEFAULT_MOVE_SPEED;
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 
