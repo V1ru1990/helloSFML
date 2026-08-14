@@ -47,7 +47,7 @@ void Platform::loadTexture(const char* filename)
  {
     std::srand(std::time(0));
     int random_x = rand() % WINDOW_WIDTH;
-    int random_y = rand() % WINDOW_LENGTH;
+    int random_y = rand() % WINDOW_HEIGHT;
     Platform::setPosition(random_x, random_y);
  }
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -66,7 +66,7 @@ void Platform::loadTexture(const char* filename)
 //сброс позиции на рандомные координаты
  void Platform::reset() 
  {
-    Platform::setPosition(rand() % WINDOW_WIDTH, TOP_POINT);
+    Platform::setPosition(rand() % WINDOW_HEIGHT, TOP_POINT);
  }
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -94,7 +94,7 @@ void Platform::loadTexture(const char* filename)
 //если да - переместить в наверх с отсупом в 50 пикселей
  bool Platform::isOffScreen() const 
  {
-    return m_y > WINDOW_WIDTH + BUFFER_ZONE;
+    return m_y > WINDOW_HEIGHT + BUFFER_ZONE;
  }
 //////////////////////////////////////////////////////////////////////////////////////////
 

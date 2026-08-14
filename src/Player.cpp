@@ -55,15 +55,15 @@ void Player::update(float gravity) //перемещние по оси ордин
         m_dx = 0;
     }
 
-    if (m_x > WINDOW_LENGTH - m_width)
+    if (m_x > WINDOW_WIDTH - m_width)
     {
-        m_x = WINDOW_LENGTH - m_width;
+        m_x = WINDOW_WIDTH - m_width;
         m_dx = 0;
     }
     /////
 
     /////проверка на земле ли объект
-    if (m_y >= WINDOW_WIDTH - m_height)
+    if (m_y >= WINDOW_HEIGHT - m_height)
     {
         m_y = WINDOW_WIDTH - m_height;
         m_dy = 0;
