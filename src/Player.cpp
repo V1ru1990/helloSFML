@@ -65,7 +65,7 @@ void Player::update(float gravity) //перемещние по оси ордин
     /////проверка на земле ли объект
     if (m_y >= WINDOW_HEIGHT - m_height)
     {
-        m_y = WINDOW_WIDTH - m_height;
+        m_y = WINDOW_HEIGHT - m_height;
         m_dy = 0;
         m_isOnGround = true;
     }
